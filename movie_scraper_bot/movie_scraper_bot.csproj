@@ -1,0 +1,19 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+    <PropertyGroup>
+        <OutputType>Exe</OutputType>
+        <TargetFramework>net6.0</TargetFramework>
+        <ImplicitUsings>enable</ImplicitUsings>
+        <Nullable>enable</Nullable>
+        <RootNamespace>Wrapper</RootNamespace>
+    </PropertyGroup>
+
+    <ItemGroup>
+      <PackageReference Include="Newtonsoft.Json" Version="13.0.1" />
+      <PackageReference Include="RestSharp" Version="107.0.4-alpha.0.6" />
+      <PackageReference Include="Telegram.Bot" Version="17.0.0" />
+      <PackageReference Include="Telegram.Bot.Extensions.Polling" Version="1.0.2" />
+      <PackageReference Include="Telegraph.Net" Version="1.1.0" />
+    </ItemGroup>
+
+</Project>
