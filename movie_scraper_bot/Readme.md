@@ -16,9 +16,13 @@ film, attori e molto altro.
 > Al comando `film` viene inviata una tastiera come la seguente: 
 > bisogna cliccare il tasto corrispondente al film che si desiderava cercare.
 
+<br>
+
 >![Apertura di un film](screenshots/open_film.png)
 > <br>
 > Quando si clicca su un bottone, viene mandato il film con un'altra tastiera.
+
+<br>
 
 >![Tastiera film](screenshots/film_keyboard.png)
 > <br>
@@ -29,15 +33,21 @@ film, attori e molto altro.
 > i principali attori coinvolti (`Top Cast`) e infine un link per aprire 
 > lo show direttamente nel sito ufficiale, imdb.com.
 
+<br>
+
 >![Top Cast](screenshots/top_cast.png)
 > <br>
 > Cliccando sul tasto `Top Cast` si apre una pagina con il nome e una foto 
 > dell'attore. Cliccando sul nome è possibile ottenere ulteriori informazioni
 > riguardo all'attore.
 
+<br>
+
 >![Risultati della ricerca di attori](screenshots/results_actor.png)
 > <br>
 > Stesso procedimento vale per la ricerca degli attori.
+
+<br>
 
 >![Informazioni attore](screenshots/open_actor.png)
 > <br>
@@ -46,6 +56,8 @@ film, attori e molto altro.
 > `Ruoli Importanti`, che apre una lista di film in cui l'attore ha recitato.
 > Poi c'è anche il tasto `Apri su Imdb.com` che apre la scheda dell'attore 
 > sul sito ufficiale.
+
+<br>
 
 >![Known for](screenshots/known_for.png)
 > <br>
