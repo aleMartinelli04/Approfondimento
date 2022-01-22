@@ -110,6 +110,7 @@ public static partial class Handlers
     {
         const string text = "Comandi disponibili:\n\n" +
                             "» film [nome film] - ricerca film\n" +
+                            "» actors [nome attore] - ricerca attore\n" +
                             "» usage - mostra questo messaggio";
 
         return await client.SendTextMessageAsync(message.Chat.Id, text);
