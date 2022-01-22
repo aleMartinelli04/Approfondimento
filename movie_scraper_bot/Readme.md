@@ -52,4 +52,3 @@ film, attori e molto altro.
 > Similmente a come succede per i film, per gli attori si apre la 
 > lista dei film in cui hanno recitato. Cliccando sul nome del film si possono
 > ottenere ulteriori informazioni, sempre dal bot.
-

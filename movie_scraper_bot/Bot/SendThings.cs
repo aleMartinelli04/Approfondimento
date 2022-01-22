@@ -41,7 +41,6 @@ public partial class Handlers
             replyMarkup: new InlineKeyboardMarkup(keyboard));
         
         Keyboard.Save(firstLineKeyboard, sentMessage);
-        Console.WriteLine($"{sentMessage.Chat.Id}_{sentMessage.MessageId}");
 
         return sentMessage;
     }
@@ -70,7 +69,6 @@ public partial class Handlers
             replyMarkup: new InlineKeyboardMarkup(keyboard));
         
         Keyboard.Save(firstLineKeyboard, sentMessage);
-        Console.WriteLine($"{sentMessage.Chat.Id}_{sentMessage.MessageId}");
 
         return sentMessage;
     }

@@ -3,7 +3,7 @@ using Telegram.Bot.Types.ReplyMarkups;
 
 namespace Wrapper.Bot;
 
-public class Keyboard
+public static class Keyboard
 {
     private static readonly Dictionary<string, List<InlineKeyboardButton>?> SavedKeyboards = new();
     
