@@ -16,9 +16,13 @@ film, attori e molto altro.
 > Al comando `film` viene inviata una tastiera come la seguente: 
 > bisogna cliccare il tasto corrispondente al film che si desiderava cercare.
 
+<br>
+
 >![Apertura di un film](screenshots/open_film.png)
 > <br>
 > Quando si clicca su un bottone, viene mandato il film con un'altra tastiera.
+
+<br>
 
 >![Tastiera film](screenshots/film_keyboard.png)
 > <br>
@@ -31,15 +35,21 @@ film, attori e molto altro.
 > ufficiale, imdb.com. L'ultimo bottone, `Manda Link`, manda un link 
 > che si può facilmente condividere.
 
+<br>
+
 >![Top Cast](screenshots/top_cast.png)
 > <br>
 > Cliccando sul tasto `Top Cast` si apre una pagina con il nome e una foto 
 > dell'attore. Cliccando sul nome è possibile ottenere ulteriori informazioni
 > riguardo all'attore.
 
+<br>
+
 >![Risultati della ricerca di attori](screenshots/results_actor.png)
 > <br>
 > Stesso procedimento vale per la ricerca degli attori.
+
+<br>
 
 >![Informazioni attore](screenshots/open_actor.png)
 > <br>
@@ -49,6 +59,8 @@ film, attori e molto altro.
 > Poi c'è anche il tasto `Apri su Imdb.com` che apre la scheda dell'attore 
 > sul sito ufficiale, e il tasto `Manda Link`, che svolge la medesima funzione
 > che aveva con i film.
+
+<br>
 
 >![Known for](screenshots/known_for.png)
 > <br>
