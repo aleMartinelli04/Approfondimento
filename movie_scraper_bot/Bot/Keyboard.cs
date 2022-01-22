@@ -7,12 +7,14 @@ public static class Keyboard
 {
     private static readonly Dictionary<string, List<InlineKeyboardButton>?> SavedKeyboards = new();
     
-    public static List<InlineKeyboardButton> GetFirstLineKeyboard(Message message)
+    public static List<InlineKeyboardButton>? GetFirstLineKeyboard(Message message)
     {
-        return SavedKeyboards[$"{message.Chat.Id}_{message.MessageId}"]!;
+        var key = $"{message.Chat.Id}_{message.MessageId}";
+
+        return SavedKeyboards.ContainsKey(key) ? SavedKeyboards[key] : null;
     }
 
-    public static void Save(List<InlineKeyboardButton> keyboard, Message message)
+    public static void Save(List<InlineKeyboardButton>? keyboard, Message message)
     {
         SavedKeyboards[$"{message.Chat.Id}_{message.MessageId}"] = keyboard;
     }

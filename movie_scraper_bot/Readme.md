@@ -22,12 +22,14 @@ film, attori e molto altro.
 
 >![Tastiera film](screenshots/film_keyboard.png)
 > <br>
-> Cliccando una volta su uno dei due bottoni della prima riga, dopo un alcuni
+> Cliccando una volta sui due bottoni della prima riga, dopo alcuni
 > secondi appare una freccetta. Così facendo si può aprire una pagina web.
 > <br>
-> Le pagine contengono commenti strani e divertenti (`Crazy Comments`),
-> i principali attori coinvolti (`Top Cast`) e infine un link per aprire 
-> lo show direttamente nel sito ufficiale, imdb.com.
+> Le pagine contengono commenti strani e divertenti (`Crazy Comments`) e
+> i principali attori coinvolti (`Top Cast`). Il primo bottone della seconda 
+> linea, invece, contiene un link per aprire lo show direttamente nel sito 
+> ufficiale, imdb.com. L'ultimo bottone, `Manda Link`, manda un link 
+> che si può facilmente condividere.
 
 >![Top Cast](screenshots/top_cast.png)
 > <br>
@@ -45,7 +47,8 @@ film, attori e molto altro.
 > che apre una pagina web contentente la biografia dell'attore, e il tasto
 > `Ruoli Importanti`, che apre una lista di film in cui l'attore ha recitato.
 > Poi c'è anche il tasto `Apri su Imdb.com` che apre la scheda dell'attore 
-> sul sito ufficiale.
+> sul sito ufficiale, e il tasto `Manda Link`, che svolge la medesima funzione
+> che aveva con i film.
 
 >![Known for](screenshots/known_for.png)
 > <br>

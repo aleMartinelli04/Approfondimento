@@ -63,6 +63,7 @@ public static partial class Handlers
             "sendactor" => SendActor(client, callback),
             "biography" => Biography(client, callback),
             "knownfor" => KnownFor(client, callback),
+            "sendlink" => SendLink(client, callback),
             _ => NoCallbacksFound(client, callback)
         };
         await handler;

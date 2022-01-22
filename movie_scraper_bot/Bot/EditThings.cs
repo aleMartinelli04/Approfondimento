@@ -26,8 +26,13 @@ public static partial class Handlers
 
         var page = Accounts.Telegraph.CreatePageAsync("Crazy comments", content).Result;
 
-        var firstLineKeyboard = Keyboard.GetFirstLineKeyboard(callback.Message!);
-        firstLineKeyboard[0] = InlineKeyboardButton.WithUrl($"Crazy Comments", page.Url);
+        var firstLineKeyboard = Keyboard.GetFirstLineKeyboard(callback.Message!) ?? new List<InlineKeyboardButton>
+        {
+            InlineKeyboardButton.WithCallbackData("Crazy comments", $"crazycomments_{showCode}"),
+            InlineKeyboardButton.WithCallbackData("Top Cast", $"topcast_{showCode}")
+        };
+
+        firstLineKeyboard[0] = InlineKeyboardButton.WithUrl($"Apri Crazy Comments", page.Url);
         Keyboard.Save(firstLineKeyboard, callback.Message!);
         
         var keyboard = new List<List<InlineKeyboardButton>>
@@ -35,7 +40,8 @@ public static partial class Handlers
             firstLineKeyboard,
             new()
             {
-                InlineKeyboardButton.WithUrl("Open On imdb.com", $"https://www.imdb.com/title/{showCode}")
+                InlineKeyboardButton.WithUrl("Open On imdb.com", $"https://www.imdb.com/title/{showCode}"),
+                InlineKeyboardButton.WithCallbackData("Manda Link", $"sendlink_{showCode}")
             }
         };
         
@@ -72,8 +78,13 @@ public static partial class Handlers
 
         var page = Accounts.Telegraph.CreatePageAsync("Top cast", content.ToArray()).Result;
         
-        var firstLineKeyboard = Keyboard.GetFirstLineKeyboard(callback.Message!);
-        firstLineKeyboard[1] = InlineKeyboardButton.WithUrl($"Top Cast", page.Url);
+        var firstLineKeyboard = Keyboard.GetFirstLineKeyboard(callback.Message!) ?? new List<InlineKeyboardButton>
+        {
+            InlineKeyboardButton.WithCallbackData("Crazy comments", $"crazycomments_{showCode}"),
+            InlineKeyboardButton.WithCallbackData("Top Cast", $"topcast_{showCode}")
+        };
+        
+        firstLineKeyboard[1] = InlineKeyboardButton.WithUrl($"Apri Top Cast", page.Url);
         Keyboard.Save(firstLineKeyboard, callback.Message!);
         
         var keyboard = new List<List<InlineKeyboardButton>>
@@ -81,7 +92,8 @@ public static partial class Handlers
             firstLineKeyboard,
             new()
             {
-                InlineKeyboardButton.WithUrl("Open On imdb.com", $"https://www.imdb.com/title/{showCode}")
+                InlineKeyboardButton.WithUrl("Open On imdb.com", $"https://www.imdb.com/title/{showCode}"),
+                InlineKeyboardButton.WithCallbackData("Manda Link", $"sendlink_{showCode}")
             }
         };
         
@@ -98,8 +110,13 @@ public static partial class Handlers
         NodeElement[] content = {actor.Bio};
         var page = Accounts.Telegraph.CreatePageAsync($"{actor.Name} - biografia", content).Result;
 
-        var firstLineKeyboard = Keyboard.GetFirstLineKeyboard(callback.Message!);
-        firstLineKeyboard[0] = InlineKeyboardButton.WithUrl("Biografia", page.Url);
+        var firstLineKeyboard = Keyboard.GetFirstLineKeyboard(callback.Message!) ?? new List<InlineKeyboardButton>
+        {
+            InlineKeyboardButton.WithCallbackData("Crazy comments", $"crazycomments_{actor.NConst}"),
+            InlineKeyboardButton.WithCallbackData("Top Cast", $"topcast_{actor.NConst}")
+        };
+        
+        firstLineKeyboard[0] = InlineKeyboardButton.WithUrl("Apri Biografia", page.Url);
         Keyboard.Save(firstLineKeyboard, callback.Message!);
         
         var keyboard = new List<List<InlineKeyboardButton>>
@@ -107,7 +124,8 @@ public static partial class Handlers
             firstLineKeyboard,
             new ()
             {
-                InlineKeyboardButton.WithUrl("Apri su Imdb.com", $"https://imdb.com/{actor.NConst}")
+                InlineKeyboardButton.WithUrl("Apri su Imdb.com", $"https://imdb.com/{actor.NConst}"),
+                InlineKeyboardButton.WithCallbackData("Manda Link", $"sendlink_{actorCode}")
             }
         };
 
@@ -142,7 +160,12 @@ public static partial class Handlers
         
         var page = Accounts.Telegraph.CreatePageAsync("Known For", content.ToArray()).Result;
 
-        var firstLineKeyboard = Keyboard.GetFirstLineKeyboard(callback.Message!);
+        var firstLineKeyboard = Keyboard.GetFirstLineKeyboard(callback.Message!) ?? new List<InlineKeyboardButton>
+        {
+            InlineKeyboardButton.WithCallbackData("Crazy comments", $"crazycomments_{actorCode}"),
+            InlineKeyboardButton.WithCallbackData("Top Cast", $"topcast_{actorCode}")
+        };
+        
         firstLineKeyboard[1] = InlineKeyboardButton.WithUrl("Apri ruoli importanti", page.Url);
         Keyboard.Save(firstLineKeyboard, callback.Message!);
         
@@ -151,9 +174,11 @@ public static partial class Handlers
             firstLineKeyboard,
             new()
             {
-                InlineKeyboardButton.WithUrl("Apri su Imdb.com", $"https://imdb.com/{actorCode}")
+                InlineKeyboardButton.WithUrl("Apri su Imdb.com", $"https://imdb.com/{actorCode}"),
+                InlineKeyboardButton.WithCallbackData("Manda Link", $"sendlink_{actorCode}")
             }
         };
+        
         return await client.EditMessageReplyMarkupAsync(callback.Message!.Chat!, callback.Message!.MessageId,
             new InlineKeyboardMarkup(keyboard));
     }

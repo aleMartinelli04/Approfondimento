@@ -19,18 +19,19 @@ public partial class Handlers
 
     private static async Task<Message> SendShow(ITelegramBotClient client, Message message, Title show, string showCode)
     {
-        List<InlineKeyboardButton> firstLineKeyboard = new()
+        List<InlineKeyboardButton>? firstLineKeyboard = new()
         {
             InlineKeyboardButton.WithCallbackData("Crazy comments", $"crazycomments_{showCode}"),
             InlineKeyboardButton.WithCallbackData("Top Cast", $"topcast_{showCode}")
         };
         
-        var keyboard = new List<List<InlineKeyboardButton>>
+        var keyboard = new List<List<InlineKeyboardButton>?>
         {
             firstLineKeyboard,
             new()
             {
-                InlineKeyboardButton.WithUrl("Open On imdb.com", $"https://www.imdb.com/title/{showCode}")
+                InlineKeyboardButton.WithUrl("Open On imdb.com", $"https://www.imdb.com/title/{showCode}"),
+                InlineKeyboardButton.WithCallbackData("Manda Link", $"sendlink_{showCode}")
             }
         };
         
@@ -53,12 +54,13 @@ public partial class Handlers
             InlineKeyboardButton.WithCallbackData("Ruoli importanti", $"knownfor_{actor.NConst}")
         };
         
-        var keyboard = new List<List<InlineKeyboardButton>>
+        var keyboard = new List<List<InlineKeyboardButton>?>
         {
             firstLineKeyboard,
             new()
             {
-                InlineKeyboardButton.WithUrl("Apri su Imdb.com", $"https://imdb.com/{actor.NConst}")
+                InlineKeyboardButton.WithUrl("Apri su Imdb.com", $"https://imdb.com/{actor.NConst}"),
+                InlineKeyboardButton.WithCallbackData("Manda Link", $"sendlink_{actor.NConst}")
             }
         };
 

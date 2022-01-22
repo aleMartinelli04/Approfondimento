@@ -36,4 +36,12 @@ public partial class Handlers
             _ => throw new Exception()
         };
     }
+
+    private static async Task<Message> SendLink(ITelegramBotClient client, CallbackQuery callback)
+    {
+        var id = callback.Data!.Split("_")[1];
+
+        return await client.SendTextMessageAsync(callback.Message!.Chat.Id,
+            $"https://t.me/movie_scraper_bot?start=id_{id}");
+    }
 }
