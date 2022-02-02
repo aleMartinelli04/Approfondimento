@@ -66,7 +66,15 @@ public static partial class Handlers
             "sendlink" => SendLink(client, callback),
             _ => NoCallbacksFound(client, callback)
         };
-        await handler;
+
+        try
+        {
+            await handler;
+        }
+        catch (Exception exception)
+        {
+            await HandleErrorAsync(client, exception);
+        }
     }
     
     private static Task UnknownUpdateHandlerAsync(ITelegramBotClient unused, Update update)
